@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		DA7F32B529474D6B0009DF67 /* BackgroundSettingAppSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F32B429474D6B0009DF67 /* BackgroundSettingAppSwiftUIApp.swift */; };
-		DA7F32B729474D6B0009DF67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F32B629474D6B0009DF67 /* ContentView.swift */; };
+		DA7F32B729474D6B0009DF67 /* BackgroundSettingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F32B629474D6B0009DF67 /* BackgroundSettingContentView.swift */; };
 		DA7F32B929474D6E0009DF67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7F32B829474D6E0009DF67 /* Assets.xcassets */; };
 		DA7F32BC29474D6E0009DF67 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7F32BB29474D6E0009DF67 /* Preview Assets.xcassets */; };
+		DA7F32C4294752060009DF67 /* ColorRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F32C3294752060009DF67 /* ColorRectangleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DA7F32B129474D6B0009DF67 /* BackgroundSettingAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundSettingAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7F32B429474D6B0009DF67 /* BackgroundSettingAppSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSettingAppSwiftUIApp.swift; sourceTree = "<group>"; };
-		DA7F32B629474D6B0009DF67 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DA7F32B629474D6B0009DF67 /* BackgroundSettingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSettingContentView.swift; sourceTree = "<group>"; };
 		DA7F32B829474D6E0009DF67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA7F32BB29474D6E0009DF67 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DA7F32C3294752060009DF67 /* ColorRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRectangleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				DA7F32B429474D6B0009DF67 /* BackgroundSettingAppSwiftUIApp.swift */,
-				DA7F32B629474D6B0009DF67 /* ContentView.swift */,
+				DA7F32B629474D6B0009DF67 /* BackgroundSettingContentView.swift */,
+				DA7F32C3294752060009DF67 /* ColorRectangleView.swift */,
 				DA7F32C229474DAD0009DF67 /* Resources */,
 				DA7F32BA29474D6E0009DF67 /* Preview Content */,
 			);
@@ -145,7 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA7F32B729474D6B0009DF67 /* ContentView.swift in Sources */,
+				DA7F32C4294752060009DF67 /* ColorRectangleView.swift in Sources */,
+				DA7F32B729474D6B0009DF67 /* BackgroundSettingContentView.swift in Sources */,
 				DA7F32B529474D6B0009DF67 /* BackgroundSettingAppSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,7 @@ import SwiftUI
 struct BackgroundSettingAppSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BackgroundSettingContentView()
         }
     }
 }
