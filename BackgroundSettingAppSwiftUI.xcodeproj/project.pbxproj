@@ -53,7 +53,7 @@
 			children = (
 				DA7F32B429474D6B0009DF67 /* BackgroundSettingAppSwiftUIApp.swift */,
 				DA7F32B629474D6B0009DF67 /* ContentView.swift */,
-				DA7F32B829474D6E0009DF67 /* Assets.xcassets */,
+				DA7F32C229474DAD0009DF67 /* Resources */,
 				DA7F32BA29474D6E0009DF67 /* Preview Content */,
 			);
 			path = BackgroundSettingAppSwiftUI;
@@ -65,6 +65,14 @@
 				DA7F32BB29474D6E0009DF67 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DA7F32C229474DAD0009DF67 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DA7F32B829474D6E0009DF67 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

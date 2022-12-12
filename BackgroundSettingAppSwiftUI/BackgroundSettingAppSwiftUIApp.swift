@@ -2,7 +2,7 @@
 //  BackgroundSettingAppSwiftUIApp.swift
 //  BackgroundSettingAppSwiftUI
 //
-//  Created by jopootrivatel on 12.12.2022.
+//  Created by Nikita Chekan on 12.12.2022.
 //
 
 import SwiftUI
