@@ -36,24 +36,6 @@ struct BGSettingContentView: View {
     }
 }
 
-//struct ColorSliderView: View {
-//    @Binding var value: Double
-//    let tintColor: Color
-//
-//    var body: some View {
-//        HStack {
-//            Text("\(lround(value))")
-//                .foregroundColor(.white)
-//                .frame(width: 35)
-//            Slider(value: $value, in: 0...255, step: 1)
-//                .tint(tintColor)
-//            TextField("255", text: .constant("\(lround(value))"))
-//                .textFieldStyle(.roundedBorder)
-//                .frame(width: 50)
-//        }
-//    }
-//}
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         BGSettingContentView()
