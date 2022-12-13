@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct BGSettingContentView: View {
+    @FocusState var isInputActive: Bool
+    
     @State private var redSliderValue = Double(Int.random(in: 0...255))
     @State private var greenSliderValue = Double(Int.random(in: 0...255))
     @State private var blueSliderValue = Double(Int.random(in: 0...255))
-    
-    @FocusState var isInputActive: Bool
     
     var body: some View {
         ZStack {
@@ -31,20 +31,17 @@ struct BGSettingContentView: View {
                 ColorSliderView(value: $blueSliderValue, tintColor: .blue)
                 
                 Spacer()
-            
             }
-            .padding()
-            
             .focused($isInputActive)
             .keyboardType(.numberPad)
             .toolbar {
                 ToolbarItem(placement: .keyboard) {
-                    
                     Button("Done") {
                         isInputActive = false
                     }
                 }
             }
+            .padding()
         }
     }
 }

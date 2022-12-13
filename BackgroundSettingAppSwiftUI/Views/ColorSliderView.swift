@@ -17,6 +17,7 @@ struct ColorSliderView: View {
             Text("\(lround(value))")
                 .foregroundColor(.gray)
                 .frame(width: 35)
+                .lineLimit(1)
             Slider(value: $value, in: 0...255, step: 1)
                 .tint(tintColor)
             TextField("", value: $value, format: .number)
