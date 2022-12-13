@@ -12,6 +12,8 @@ struct BGSettingContentView: View {
     @State private var greenSliderValue = Double(Int.random(in: 0...255))
     @State private var blueSliderValue = Double(Int.random(in: 0...255))
     
+    @FocusState var isInputActive: Bool
+    
     var body: some View {
         ZStack {
             Color.black
@@ -32,6 +34,17 @@ struct BGSettingContentView: View {
             
             }
             .padding()
+            
+            .focused($isInputActive)
+            .keyboardType(.numberPad)
+            .toolbar {
+                ToolbarItem(placement: .keyboard) {
+                    
+                    Button("Done") {
+                        isInputActive = false
+                    }
+                }
+            }
         }
     }
 }
