@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ColorSliderView: View {
     @Binding var value: Double
+    
     let tintColor: Color
     
     var body: some View {
@@ -18,9 +19,10 @@ struct ColorSliderView: View {
                 .frame(width: 35)
             Slider(value: $value, in: 0...255, step: 1)
                 .tint(tintColor)
-            TextField("", text: .constant("\(lround(value))"))
+            TextField("", value: $value, format: .number)
                 .textFieldStyle(.roundedBorder)
                 .frame(width: 50)
+                .multilineTextAlignment(.center)
         }
     }
 }
