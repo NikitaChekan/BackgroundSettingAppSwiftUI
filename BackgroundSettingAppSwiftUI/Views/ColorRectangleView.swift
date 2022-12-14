@@ -8,16 +8,23 @@
 import SwiftUI
 
 struct ColorRectangleView: View {
-    let color: Color
-    let cornerRadius: CGFloat = 25
+    let redColor: Double
+    let greenColor: Double
+    let blueColor: Double
 
     var body: some View {
-        RoundedRectangle(cornerRadius: cornerRadius)
+        RoundedRectangle(cornerRadius: 25)
             .frame(height: 200)
-            .foregroundColor(color)
+            .foregroundColor(
+                Color(
+                    red: redColor / 255,
+                    green: greenColor / 255,
+                    blue: blueColor / 255
+                )
+            )
             .overlay(
                 RoundedRectangle(
-                    cornerRadius: cornerRadius
+                    cornerRadius: 25
                 )
                 .stroke(.white, lineWidth: 2)
             )
@@ -27,6 +34,6 @@ struct ColorRectangleView: View {
 
 struct ColorRectangleView_Previews: PreviewProvider {
     static var previews: some View {
-        ColorRectangleView(color: .black)
+        ColorRectangleView(redColor: 0, greenColor: 0, blueColor: 0)
     }
 }

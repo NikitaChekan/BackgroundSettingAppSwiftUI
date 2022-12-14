@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BGSettingContentView: View {
-    @FocusState var isInputActive: Bool
+    @FocusState private var isInputActive: Bool
     
     @State private var redSliderValue = Double(Int.random(in: 0...255))
     @State private var greenSliderValue = Double(Int.random(in: 0...255))
@@ -20,20 +20,19 @@ struct BGSettingContentView: View {
                 .ignoresSafeArea()
             VStack(spacing: 25) {
                 ColorRectangleView(
-                    color: Color(
-                        red: redSliderValue / 255,
-                        green: greenSliderValue / 255,
-                        blue: blueSliderValue / 255
-                    )
+                    redColor: redSliderValue,
+                    greenColor: greenSliderValue,
+                    blueColor: blueSliderValue
                 )
-                ColorSliderView(value: $redSliderValue, tintColor: .red)
-                ColorSliderView(value: $greenSliderValue, tintColor: .green)
-                ColorSliderView(value: $blueSliderValue, tintColor: .blue)
+                ColorSliderView(value: $redSliderValue, textFieldValue: .constant("\(redSliderValue)"), tintColor: .red)
+                ColorSliderView(value: $greenSliderValue, textFieldValue: .constant("\(greenSliderValue)"), tintColor: .green)
+                ColorSliderView(value: $blueSliderValue, textFieldValue: .constant("\(blueSliderValue)"), tintColor: .blue)
+                
                 
                 Spacer()
             }
             .focused($isInputActive)
-            .keyboardType(.numberPad)
+            .keyboardType(.decimalPad)
             .toolbar {
                 ToolbarItem(placement: .keyboard) {
                     Button("Done") {
