@@ -28,7 +28,7 @@ struct ColorRectangleView: View {
                 )
                 .stroke(.white, lineWidth: 2)
             )
-            .shadow(radius: 15)
+//            .shadow(radius: 15)
     }
 }
 

@@ -22,7 +22,7 @@ struct ColorSliderView: View {
             Slider(value: $value, in: 0...255, step: 1)
                 .tint(tintColor)
 //                .animation(.easeInOut, value: value)
-                .onChange(of: value) { newValue in
+                .onChange(of: value) { newValue in /// Для передачи элемента в реальном времени
                     text = "\(lround(newValue))"
                 }
             TextFieldView(
@@ -30,9 +30,9 @@ struct ColorSliderView: View {
                 text: $text
             )
             }
-//        .onAppear {
-//            text = "\(lround(value))"
-//        }
+        .onAppear { /// Вызывается в момент появления вью на экране (аналог ВьюДидЛоад)
+            text = "\(lround(value))"
+        }
     }
 }
 
