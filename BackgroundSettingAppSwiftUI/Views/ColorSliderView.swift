@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ColorSliderView: View {
     @Binding var value: Double
+    @State private var text = ""
     
     let tintColor: Color
     
@@ -20,8 +21,18 @@ struct ColorSliderView: View {
                 .lineLimit(1)
             Slider(value: $value, in: 0...255, step: 1)
                 .tint(tintColor)
-            TextFieldView(value: $value, textFieldValue: .constant("\(value)"))
-        }
+//                .animation(.easeInOut, value: value)
+                .onChange(of: value) { newValue in
+                    text = "\(lround(newValue))"
+                }
+            TextFieldView(
+                value: $value,
+                text: $text
+            )
+            }
+//        .onAppear {
+//            text = "\(lround(value))"
+//        }
     }
 }
 

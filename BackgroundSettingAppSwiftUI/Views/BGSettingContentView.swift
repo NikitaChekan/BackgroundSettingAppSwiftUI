@@ -10,9 +10,9 @@ import SwiftUI
 struct BGSettingContentView: View {
     @FocusState private var isInputActive: Bool
     
-    @State private var redSliderValue = Double(Int.random(in: 0...255))
-    @State private var greenSliderValue = Double(Int.random(in: 0...255))
-    @State private var blueSliderValue = Double(Int.random(in: 0...255))
+    @State private var redSliderValue = Double.random(in: 0...255)
+    @State private var greenSliderValue = Double.random(in: 0...255)
+    @State private var blueSliderValue = Double.random(in: 0...255)
     
     var body: some View {
         ZStack {

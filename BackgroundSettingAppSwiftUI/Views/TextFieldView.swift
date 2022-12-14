@@ -9,34 +9,33 @@ import SwiftUI
 
 struct TextFieldView: View {
     @Binding var value: Double
-    @Binding var textFieldValue: String
+    @Binding var text: String
     
     @State private var alertPresented = false
     
     var body: some View {
-        TextField("", text: $textFieldValue) { checkTextFieldValue() }
-            .textFieldStyle(.roundedBorder)
+        TextField("", text: $text) { checkTextFieldValue() }
             .frame(width: 50)
+            .textFieldStyle(.roundedBorder)
             .multilineTextAlignment(.center)
-        
             .alert("Wrong format", isPresented: $alertPresented, actions: {}) {
                 Text("Enter value from 0 to 255!")
             }
     }
     
     private func checkTextFieldValue() {
-        if let value = Int(textFieldValue), (0...255).contains(value) {
+        if let value = Int(text), (0...255).contains(value) {
             self.value = Double(value)
-            return
+        } else {
+            alertPresented.toggle()
+            value = 0
+            text = "0"
         }
-        alertPresented.toggle()
-        value = 0
-        textFieldValue = ""
     }
 }
 
 struct TextFieldView_Previews: PreviewProvider {
     static var previews: some View {
-        TextFieldView(value: .constant(0), textFieldValue: .constant("0"))
+        TextFieldView(value: .constant(0), text: .constant("0"))
     }
 }
