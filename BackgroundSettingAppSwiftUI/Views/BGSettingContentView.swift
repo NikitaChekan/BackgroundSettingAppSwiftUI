@@ -24,9 +24,9 @@ struct BGSettingContentView: View {
                     greenColor: greenSliderValue,
                     blueColor: blueSliderValue
                 )
-                ColorSliderView(value: $redSliderValue, textFieldValue: .constant("\(redSliderValue)"), tintColor: .red)
-                ColorSliderView(value: $greenSliderValue, textFieldValue: .constant("\(greenSliderValue)"), tintColor: .green)
-                ColorSliderView(value: $blueSliderValue, textFieldValue: .constant("\(blueSliderValue)"), tintColor: .blue)
+                ColorSliderView(value: $redSliderValue, tintColor: .red)
+                ColorSliderView(value: $greenSliderValue, tintColor: .green)
+                ColorSliderView(value: $blueSliderValue, tintColor: .blue)
                 
                 
                 Spacer()

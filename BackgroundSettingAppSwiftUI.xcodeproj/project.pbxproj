@@ -13,6 +13,7 @@
 		DA7F32BC29474D6E0009DF67 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7F32BB29474D6E0009DF67 /* Preview Assets.xcassets */; };
 		DA7F32C4294752060009DF67 /* ColorRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F32C3294752060009DF67 /* ColorRectangleView.swift */; };
 		DA85FF862947B0E800AC466A /* ColorSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85FF852947B0E800AC466A /* ColorSliderView.swift */; };
+		DAED71CD2949D17000BDCC0B /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED71CC2949D17000BDCC0B /* TextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		DA7F32BB29474D6E0009DF67 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA7F32C3294752060009DF67 /* ColorRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRectangleView.swift; sourceTree = "<group>"; };
 		DA85FF852947B0E800AC466A /* ColorSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSliderView.swift; sourceTree = "<group>"; };
+		DAED71CC2949D17000BDCC0B /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				DA7F32B629474D6B0009DF67 /* BGSettingContentView.swift */,
 				DA7F32C3294752060009DF67 /* ColorRectangleView.swift */,
 				DA85FF852947B0E800AC466A /* ColorSliderView.swift */,
+				DAED71CC2949D17000BDCC0B /* TextFieldView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA7F32C4294752060009DF67 /* ColorRectangleView.swift in Sources */,
+				DAED71CD2949D17000BDCC0B /* TextFieldView.swift in Sources */,
 				DA85FF862947B0E800AC466A /* ColorSliderView.swift in Sources */,
 				DA7F32B729474D6B0009DF67 /* BGSettingContentView.swift in Sources */,
 				DA7F32B529474D6B0009DF67 /* BackgroundSettingAppSwiftUIApp.swift in Sources */,
