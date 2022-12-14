@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct BGSettingContentView: View {
-    @State private var redSliderValue = Double.random(in: 0...255)
-    @State private var greenSliderValue = Double.random(in: 0...255)
-    @State private var blueSliderValue = Double.random(in: 0...255)
+    @State private var redSliderValue = Double.random(in: 0...255).rounded()
+    @State private var greenSliderValue = Double.random(in: 0...255).rounded()
+    @State private var blueSliderValue = Double.random(in: 0...255).rounded()
     
     @FocusState private var isInputActive: Bool
     
@@ -18,7 +18,7 @@ struct BGSettingContentView: View {
         ZStack {
             Color.black
                 .ignoresSafeArea()
-                .onTapGesture { /// В конспект
+                .onTapGesture {
                     isInputActive = false
                 }
             VStack(spacing: 25) {
@@ -28,14 +28,14 @@ struct BGSettingContentView: View {
                     blueColor: blueSliderValue
                 )
                 VStack {
-                    ColorSliderView(value: $redSliderValue, tintColor: .red)
-                    ColorSliderView(value: $greenSliderValue, tintColor: .green)
-                    ColorSliderView(value: $blueSliderValue, tintColor: .blue)
+                    ColorSliderView(value: $redSliderValue, color: .red)
+                    ColorSliderView(value: $greenSliderValue, color: .green)
+                    ColorSliderView(value: $blueSliderValue, color: .blue)
                 }
                 .focused($isInputActive)
-                .keyboardType(.decimalPad)
                 .toolbar {
                     ToolbarItem(placement: .keyboard) {
+                        Spacer()
                         Button("Done") {
                             isInputActive = false
                         }
