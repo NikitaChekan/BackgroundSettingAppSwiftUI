@@ -12,14 +12,14 @@ struct BGSettingContentView: View {
     @State private var greenSliderValue = Double.random(in: 0...255).rounded()
     @State private var blueSliderValue = Double.random(in: 0...255).rounded()
     
-    @FocusState private var isInputActive: Bool
+    @FocusState private var focusedField: Field?
     
     var body: some View {
         ZStack {
             Color.black
                 .ignoresSafeArea()
                 .onTapGesture {
-                    isInputActive = false
+                    focusedField = nil
                 }
             VStack(spacing: 25) {
                 ColorRectangleView(
@@ -29,21 +29,62 @@ struct BGSettingContentView: View {
                 )
                 VStack {
                     ColorSliderView(value: $redSliderValue, color: .red)
+                        .focused($focusedField, equals: .red)
                     ColorSliderView(value: $greenSliderValue, color: .green)
+                        .focused($focusedField, equals: .green)
                     ColorSliderView(value: $blueSliderValue, color: .blue)
+                        .focused($focusedField, equals: .blue)
                 }
-                .focused($isInputActive)
                 .toolbar {
                     ToolbarItem(placement: .keyboard) {
+                        Button(action: previousField) {
+                            Image(systemName: "chevron.up")
+                        }
+                        Button(action: nextField) {
+                            Image(systemName: "chevron.down")
+                        }
                         Spacer()
+                        
                         Button("Done") {
-                            isInputActive = false
+                            focusedField = nil
                         }
                     }
                 }
                 Spacer()
             }
             .padding()
+        }
+    }
+}
+
+extension BGSettingContentView {
+    private enum Field {
+        case red, green, blue
+    }
+    
+    private func nextField() {
+        switch focusedField {
+        case .red:
+            focusedField = .green
+        case .green:
+            focusedField = .blue
+        case .blue:
+            focusedField = .red
+        case .none:
+            focusedField = nil
+        }
+    }
+    
+    private func previousField() {
+        switch focusedField {
+        case .red:
+            focusedField = .blue
+        case .green:
+            focusedField = .red
+        case .blue:
+            focusedField = .green
+        case .none:
+            focusedField = nil
         }
     }
 }
