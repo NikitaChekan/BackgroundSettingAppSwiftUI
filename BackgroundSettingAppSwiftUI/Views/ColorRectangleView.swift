@@ -23,9 +23,7 @@ struct ColorRectangleView: View {
                 )
             )
             .overlay(
-                RoundedRectangle(
-                    cornerRadius: 25
-                )
+                RoundedRectangle(cornerRadius: 25)
                 .stroke(.white, lineWidth: 2)
             )
 //            .shadow(radius: 15)
