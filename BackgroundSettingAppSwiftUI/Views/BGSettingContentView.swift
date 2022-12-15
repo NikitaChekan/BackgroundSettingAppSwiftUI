@@ -27,6 +27,9 @@ struct BGSettingContentView: View {
                     greenColor: greenSliderValue,
                     blueColor: blueSliderValue
                 )
+                .onTapGesture {
+                    focusedField = nil
+                }
                 VStack {
                     ColorSliderView(value: $redSliderValue, color: .red)
                         .focused($focusedField, equals: .red)
@@ -36,7 +39,7 @@ struct BGSettingContentView: View {
                         .focused($focusedField, equals: .blue)
                 }
                 .toolbar {
-                    ToolbarItem(placement: .keyboard) {
+                    ToolbarItemGroup(placement: .keyboard) {
                         Button(action: previousField) {
                             Image(systemName: "chevron.up")
                         }
